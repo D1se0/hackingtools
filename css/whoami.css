@@ -1,0 +1,11 @@
+#trabajo,
+#whoami-title {
+    color: #b5e853;
+}
+
+.profile-image {
+  max-width: 100px; /* Ancho máximo de 300 píxeles */
+  height: auto;     /* Mantener la proporción original */
+  display: inline;  /* Alinea la imagen con el texto */
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+}

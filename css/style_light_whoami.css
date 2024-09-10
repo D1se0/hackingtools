@@ -1,0 +1,492 @@
+/* Estilos globales */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0 url("../img/background-light.png") 0 0;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+body, html {
+    font-family: 'Source Code Pro', monospace;
+}
+
+h1, h2, h3, p, code {
+    font-family: 'Source Code Pro', monospace;
+}
+
+/* Imagen del perfil */
+.profile-image {
+    max-width: 100%; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    float: left; /* Alinea la imagen a la izquierda */
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+
+/* Tipografía y enlaces */
+a {
+    color: #007bff;
+    text-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:focus, a:active {
+    outline: 0;
+    border: none;
+}
+
+/* Headers y títulos */
+header {
+    background: rgba(0, 0, 0, 0.05);
+    border-bottom: 1px dashed #007bff;
+    padding: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+header h1 {
+    font-size: 24px;
+    line-height: 1.5;
+    margin: 0;
+    font-weight: bold;
+    color: #007bff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 5px rgba(0, 123, 255, 0.1), 0 0 10px rgba(0, 123, 255, 0.1);
+}
+.header-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.header-link {
+    font-size: 18px;
+    font-weight: bold; /* Negrita para los enlaces del header */
+    color: #333; /* Gris oscuro como antes */
+}
+
+.header-icon {
+    width: 70px; /* Ajusta el tamaño del icono */
+    height: auto;
+    margin-bottom: -68px;
+    margin-top: -3px;
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Línea azul con puntitos */
+hr {
+    height: 0;
+    border: 0;
+    border-bottom: 1px dashed #007bff;
+    color: #007bff;
+}
+
+/* Contenedores y alineación */
+.container {
+    display: block;
+    margin: auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Contenido principal */
+#main_content {
+    width: 100%;
+}
+section {
+    display: block;
+    margin-bottom: 20px;
+}
+.post-title {
+    font-size: 20px;
+    margin: 0 0 10px;
+    font-family: "Courier New", Courier, Monaco, "Lucida Console", monospace; /* Fuente estilo hacker */
+    color: #007bff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 5px rgba(0, 123, 255, 0.1), 0 0 10px rgba(0, 123, 255, 0.1);
+}
+.post-title .arrow-link {
+    margin-right: 8px;
+    color: #007bff; /* Color azul para las flechas */
+}
+.postitem {
+    margin-bottom: 10px;
+}
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px; /* Espacio reducido entre tags */
+}
+
+/* Estilo de los tags */
+code.posttag {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1px 4px; /* Menor padding para tamaño reducido */
+    margin: 0 1px; /* Menor margen entre tags */
+    border-radius: 2px;
+    font-family: "Courier New", Courier, Monaco, "Lucida Console", monospace; /* Fuente estilo hacker */
+    color: #666;
+    font-size: 10px; /* Tamaño más pequeño */
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 123, 255, 0.1);
+}
+
+/* Estilo específico para el tag "Herramientas" */
+code.posttag.tools {
+    color: #a15dff; /* Color morado claro para herramientas */
+}
+
+/* Estilo de los tags al pasar el ratón por encima */
+code.posttag a {
+    text-decoration: none; /* Sin subrayado */
+    color: inherit; /* Hereda el color del código */
+}
+code.posttag:hover {
+    background: rgba(0, 0, 0, 0.05); /* Fondo más claro al pasar el ratón */
+    color: #444; /* Color gris oscuro al pasar el ratón */
+}
+code.posttag.tools:hover {
+    background: rgba(0, 0, 0, 0.05); /* Fondo más claro al pasar el ratón */
+    color: #9c7bff; /* Color morado claro al pasar el ratón para herramientas */
+}
+
+/* Eliminar puntos en la lista */
+ul {
+    list-style: none; /* Eliminar los puntos de la lista */
+    padding-left: 0; /* Eliminar el padding por defecto */
+}
+
+/* Flechas en los títulos de las herramientas */
+.arrow-link {
+    color: #007bff; /* Color azul como el de la página */
+    font-size: 20px; /* Ajusta el tamaño si es necesario */
+    margin-right: 8px;
+}
+
+/* Palabras clave en negrita */
+strong {
+    font-weight: bold;
+}
+
+/* Tablas y otros elementos */
+table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+th, td {
+    padding: 10px;
+    border-bottom: 1px dashed #007bff;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 50px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    background: #007bff;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    cursor: pointer;
+}
+.btn:hover {
+    border-color: #333;
+}
+
+/* Paginación */
+.pagination {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.page-item {
+    display: inline-block;
+    margin: 0 5px;
+    font-weight: bold;
+    color: #007bff; /* Color por defecto para los enlaces de página */
+    text-decoration: none;
+}
+
+.page-item.active {
+    color: #fff; /* Color blanco para la página activa */
+    background: none; /* Sin fondo para la página activa */
+}
+
+.page-item:hover {
+    color: #b5e853; /* Color al pasar el ratón por encima */
+}
+
+.page-item:focus, .page-item:active {
+    outline: none; /* Quitar el contorno del enfoque */
+}
+
+/* Footer */
+.site-footer {
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    border-top: 1px dashed #ccc;
+    background-color: #f0f0f0; /* Fondo del footer */
+    position: relative;
+}
+
+/* Contenedor del footer */
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between; /* Distribuir espacio entre elementos */
+    align-items: center;
+    flex-wrap: wrap; /* Ajusta elementos en varias líneas si es necesario */
+    gap: 20px;
+    position: relative;
+}
+
+/* Estilo de la columna de redes sociales */
+.footer-col-social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    order: 1; /* Mantener al lado izquierdo */
+}
+
+.footer-col-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-col-social li {
+    display: inline-block;
+}
+
+.footer-col-social a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col-social a:hover {
+    color: #b5e853;
+}
+
+.footer-logo {
+    width: 24px; /* Ajusta el tamaño del logo */
+    vertical-align: middle;
+}
+
+.footer-logo-ico {
+    width: 50px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantén la proporción de la imagen */
+}
+
+/* Estilo del logo central */
+.footer-logo-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%; /* Centrado vertical */
+    transform: translate(-50%, -50%);
+}
+
+/* Estilo del copyright */
+.footer-copyright {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    order: 2; /* Mantener al lado derecho */
+}
+.footer-copyright p {
+    margin: 0;
+    font-size: 14px;
+}
+  
+/* Estilo de imágenes pequeñas */
+.small-image {
+    max-width: 150px; /* Ancho máximo de 150 píxeles */
+    height: auto;     /* Mantener la proporción original */
+    display: inline;  /* Alinea la imagen con el texto */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+/* Alineación del texto */
+.text-left {
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Resalto de color con animación */
+/* Deslizamiento suave con resalto de color por id */
+.highlight {
+    position: relative;
+    background: rgba(0, 0, 0, 0.1); /* Fondo negro claro y transparente para mejor visibilidad en modo claro */
+    border-radius: 4px; /* Bordes redondeados opcional */
+    transition: background 2s ease-out; /* Suaviza la transición del fondo */
+    outline: 2px solid rgba(0, 0, 0, 0.2); /* Contorno negro muy claro */
+    outline-offset: 4px; /* Espacio entre el contorno y el contenido */
+  }
+  
+  @keyframes highlight-animation {
+    0% {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    100% {
+      background-color: transparent;
+    }
+  }  
+
+/* Estilo de imágenes pequeñas en herramientas */
+.small-image-tools {
+    width: 15%;
+}
+
+/* Títulos de herramientas */
+.title-tools {
+    color: #007bff; /* Azul más suave */
+    text-shadow: 0 0 3px rgba(0, 123, 255, 0.3);
+}
+
+/* Contenido de las herramientas */
+.container-tools {
+    margin: auto;
+    max-width: 70%;
+}
+
+/* Contenido de los tags */
+.container-tags {
+    margin: auto;
+    max-width: 65%;
+}
+
+/* Estilos generales para la barra de desplazamiento en navegadores basados en WebKit para modo claro */
+::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+    height: 10px; /* Altura de la barra de desplazamiento para desplazamiento horizontal */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--light-gray-2); /* Color del "pulgar" de la barra de desplazamiento en modo claro */
+    border-radius: 5px; /* Bordes redondeados del "pulgar" */
+    border: 2px solid var(--light-gray-1); /* Borde alrededor del "pulgar" para crear espacio */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--light-gray-3); /* Color del "pulgar" al pasar el ratón por encima en modo claro */
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--light-gray-1); /* Color de fondo de la pista de la barra de desplazamiento en modo claro */
+    border-radius: 5px; /* Bordes redondeados de la pista */
+}
+
+/* Soporte para la personalización de la barra de desplazamiento en Firefox para modo claro */
+.scroll-container {
+    scrollbar-width: thin; /* Estilo de la barra de desplazamiento: thin, auto, none */
+    scrollbar-color: var(--light-gray-2) var(--light-gray-1); /* Color del pulgar y de la pista en modo claro */
+}
+
+/* Aplicación específica para una sección o clase */
+.content pre::-webkit-scrollbar {
+    width: 8px;
+}
+
+.content pre::-webkit-scrollbar-thumb {
+    background-color: var(--light-gray-2);
+    border-radius: 4px;
+}
+
+.content pre::-webkit-scrollbar-thumb:hover {
+    background-color: var(--light-gray-3);
+}
+
+.content pre::-webkit-scrollbar-track {
+    background-color: var(--light-gray-1);
+    border-radius: 4px;
+}
+
+:root {
+    --light-gray-1: #e0e0e0; /* Fondo de la pista */
+    --light-gray-2: #c0c0c0; /* Pulgar de la barra */
+    --light-gray-3: #a0a0a0; /* Pulgar en hover */
+}
+
+/* Estilo para tema claro */
+  
+  /* Botón de cambio de tema */
+  .toggle-button {
+    position: absolute; /* Posiciona el botón en relación al header */
+    right: 20px; /* Ajusta el espacio desde el borde derecho */
+    top: 7%; /* Centra verticalmente */
+    transform: translateY(-50%); /* Ajusta el centro verticalmente */
+    width: 40px; /* Ajusta según tu diseño */
+    height: 40px; /* Ajusta según tu diseño */
+    border: none;
+    border-radius: 50%;
+    background: transparent; /* Sin fondo */
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.3s;
+}
+  
+  /* Icono del Sol */
+  .icon.sun {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #f1c40f;
+    box-shadow: 0 0 8px rgba(241, 196, 15, 0.7);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  
+  /* Icono de la Luna */
+  .icon.moon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: inset -4px -4px 0 0 #1a1a1a;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  
+  /* Animación del sol */
+  .sun {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .moon {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  
+  /* Transiciones entre iconos */
+  body.dark-theme .sun {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  
+  body.dark-theme .moon {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+#trabajo,
+#whoami-title {
+    color: #89b03f;
+}
+
+.profile-image {
+  max-width: 100px; /* Ancho máximo de 300 píxeles */
+  height: auto;     /* Mantener la proporción original */
+  display: inline;  /* Alinea la imagen con el texto */
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
