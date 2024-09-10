@@ -39,7 +39,7 @@ To start using HackingTools, follow these steps:
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/yourusername/HackingTools.git
+   git clone https://github.com/D1se0/hackingtools.git
    ```
    
 - **Explore the Tools**: Browse through the categories and select tools that match your needs. Each tool includes a README or instructions file with details on how to use it.
